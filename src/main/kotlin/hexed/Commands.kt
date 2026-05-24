@@ -7,24 +7,24 @@ import hexed.utils.PartyUtils
 import mindurka.annotations.Command
 import mindustry.gen.Player
 
-@Command
-private fun spectate(caller: Player) {
-    val member = Session.getMember(caller) ?: return
-
-    if (member.isDerelict) {
-        Session.spawn(member)
-        Tl.send(caller).done("{commands.spectate.game}")
-        return
-    }
-
-    Session.getParty(member)?.let {
-        if(member.isLeaderOf(it)) Session.destroy(it)
-    }
-
-    Session.leave(member)
-
-    Tl.send(caller).done("{commands.spectate.spectator}")
-}
+// @Command
+// private fun spectate(caller: Player) {
+//     val member = Session.getMember(caller) ?: return
+//
+//     if (member.isDerelict) {
+//         Session.spawn(member)
+//         Tl.send(caller).done("{commands.spectate.game}")
+//         return
+//     }
+//
+//     Session.getParty(member)?.let {
+//         if(member.isLeaderOf(it)) Session.destroy(it)
+//     }
+//
+//     Session.leave(member)
+//
+//     Tl.send(caller).done("{commands.spectate.spectator}")
+// }
 
 @Command
 private fun lb(caller: Player) {

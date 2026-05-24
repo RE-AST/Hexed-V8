@@ -1,0 +1,649 @@
+name: New Test Balance (Serpulo) by blackberry2093
+// description: idk how to name that so you can probably call that rebalance "blackberry rebalance/ребаланс блека/..."
+
+unit.dagger.weapons.0.reload: 40,
+unit.dagger.weapons.0.bullet.damage: 12,
+unit.dagger.weapons.0.bullet.lifetime: 54.5,
+unit.dagger.speed: 0.6,
+unit.dagger.health: 120,
+unit.dagger.armor: 2,
+unit.dagger.rotateSpeed: 7,
+unit.dagger.maxRange: 136, 
+unit.dagger.range: 135  
+unit.dagger.description: "Fires standard bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 150 -> 120\nArmor: 0 -> 2\nSpeed: 3.75/sec -> 4.5/sec\n\nFirerate: 2.3/sec -> 1.5/sec\nDamage: 9 -> 12\nRange: 18.2 -> 17\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased unit cost (10 silicon/10 lead -> 15 silicon/10 lead)\n- Increased rotateSpeed",
+//dagger
+
+unit.mace.speed: 0.58,
+unit.mace.health: 510,
+unit.mace.armor: 5,
+unit.mace.weapons.0.bullet.damage: 51,
+unit.mace.rotateSpeed: 4,
+unit.mace.description: "Fires streams of flame at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 550 -> 510\nArmor: 4 -> 5\nSpeed: 3.75/sec -> 4.35/sec\n\nDamage: 74 -> 51\n\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)\n- Increased rotateSpeed", 
+//mace
+
+unit.fortress.speed: 0.5,
+unit.fortress.health: 970,
+unit.fortress.armor: 10,
+unit.fortress.rotateSpeed: 3.2,
+unit.fortress.weapons.0.bullet.speed: 2.5,
+unit.fortress.weapons.0.bullet.splashDamage: 70,
+unit.fortress.weapons.0.bullet.lifetime: 92,
+unit.fortress.maxRange: 230.4,
+unit.fortress.range: 230, 
+unit.fortress.description: "Fires long-range artillery at enemy ground targets.\n\n[gold]DP Changelog[white]:\nHealth: 900 -> 970\nArmor: 9 -> 10\nSpeed: 3.225/sec -> 3.75/sec\n\nSplashDamage: 80 -> 70\nRange: 29.5 -> 28.8\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotateSpeed",
+//fortress
+
+unit.scepter.speed: 0.52,
+unit.scepter.armor: 14,
+unit.scepter.health: 9100,
+unit.scepter.weapons.3.bullet.damage: 23,
+unit.scepter.weapons.1.bullet.damage: 70,
+unit.scepter.weapons.3.bullet.lifetime: 16.5,
+unit.scepter.weapons.5.bullet.lifetime: 14,
+unit.scepter.weapons.1.bullet.lifetime: 22,
+unit.scepter.maxRange: 172,
+unit.scepter.range: 172,
+unit.scepter.rotateSpeed: 3, 
+unit.scepter.description: "Fires a barrage of charged bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 9000 -> 9100\nArmor: 10 -> 14\nSpeed: 2.7/sec -> 3.9/sec\n\nRange: 26.5 -> 21.5\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Minor damage rebalance\n- Increased rotateSpeed",
+//scepter
+
+unit.reign.speed: 0.48,
+unit.reign.armor: 27,
+unit.reign.health: 25000,
+unit.reign.rotateSpeed: 2.6,
+unit.reign.weapons.0.bullet.lifetime: 17.3,
+unit.reign.weapons.0.bullet.fragBullet.lifetime: 12,
+unit.reign.maxRange: 218.3,
+unit.reign.range: 218.3,  
+unit.reign.description: "Fires a barrage of massive piercing bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 24000 -> 25000\nArmor: 18 -> 27\nSpeed: 3.225/sec -> 3.75/sec\n\nSplashDamage: 80 -> 70\nRange: 23.8 -> 27.2\n\n- Adjusted range and maxRange (range description and actual range attack are more closer to each one)",//reign 
+
+
+unit.nova.weapons.0.bullet.damage: 13,
+unit.nova.weapons.0.reload: 48,
+unit.nova.speed: 0.62,
+unit.nova.health: 130,
+unit.nova.armor: 3,
+unit.nova.rotateSpeed: 7, 
+unit.nova.weapons.0.bullet.healPercent: 3,
+unit.nova.abilities.0.sameTypeHealMult: 0.5, 
+unit.nova.maxRange: 152,
+unit.nova.range: 160,
+unit.nova.weapons.0.bullet.pierce: true,
+unit.nova.weapons.0.bullet.pierceCap: 2,
+unit.nova.weapons.0.bullet.pierceBuilding: true, 
+unit.nova.description: "Fires laser bolts that damage enemy targets and repair allied structures. Capable of flight.\n\n[gold]DP Changelog[white]:\nHealth: 120 -> 130\nArmor: 1 -> 3\nSpeed: 4.125/sec -> 4.65/sec\n\nAdded 2x pierce\n\nSlighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n\n- Increased rotateSpeed\n- Added 0.5x multiplier for same type repair amount\n- Reduced buildcost (30 silicon/20 lead/20 titanium -> 25 silicon/10 lead/15 titanium)",
+//nova
+
+unit.pulsar.speed: 0.732, 
+unit.pulsar.health: 330,
+unit.pulsar.mineSpeed: 3.5,
+unit.pulsar.weapons.0.bullet.damage: 15, 
+unit.pulsar.weapons.0.bullet.healPercent: 0.75, 
+unit.pulsar.description: "Fires arcs of electricity that damage enemy targets and repair allied structures. Capable of flight.\n\n[gold]DP Changelog[white]:\nHealth: 320 -> 330\nSpeed: 5.25/sec -> 5.5/sec\n\n- Slighty buffed mining speed (300% -> 350%)\n- Reduced healPercentage (2% -> 0.75%)\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)",
+//pulsar
+
+unit.quasar.speed: 0.535,
+unit.quasar.armor: 8,
+unit.quasar.health: 720,
+unit.quasar.boostMultiplier: 1.9,
+unit.quasar.rotateSpeed: 5,
+unit.quasar.abilities.0.cooldown: 180,
+unit.quasar.abilities.0.regen: 0.3,
+unit.quasar.abilities.0.max: 512,
+unit.quasar.weapons.0.bullet.healPercent: 5,
+unit.quasar.weapons.0.bullet.damage: 52,
+unit.quasar.weapons.0.bullet.healAmount: 35, 
+unit.quasar.description: "Fires piercing laser beams that damage enemy targets and repair allied structures. Capable of flight. Shielded.\n\n[gold]DP Changelog[white]:\nHealth: 640 -> 720\nArmor: 9 -> 8\nSpeed: 3.75/sec -> 4.012/sec\n\nDamage: 45 -> 52\n\nMax Shield: 500 -> 512\nRepair speed (Shield): 24/sec -> 18/sec\nCooldown (Shield): 6 -> 3\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotateSpeed\n- Reduced healPercentage (10% -> 5%)\n- Slighty reduced boostMultiplier (2f (7.5/sec) -> 1.9f (7.62/sec))",
+//quasar
+
+unit.vela.health: 7300,
+unit.vela.speed: 0.56,
+unit.vela.armor: 13,
+unit.vela.rotateSpeed: 3.2, 
+unit.vela.weapons.1.repairSpeed: 1.94, //vela
+unit.vela.boostMultiplier: 1.6,
+unit.vela.description: "Fires a massive continuous laser beam that damages enemy targets, causes fires and repairs allied structures. Capable of flight.\n\n[gold]DP Changelog[white]:\nHealth: 8200 -> 7300\nArmor: 9 -> 13\nSpeed: 3.3/sec -> 4.2/sec\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Slighty reduced boostMultiplier (2f (7.92/sec) -> 1.6f (6.72/sec))\n- Increased rotateSpeed (only while attacking)",
+
+unit.corvus.armor: 12,
+unit.corvus.health: 15000,
+unit.corvus.weapons.0.reload: 540,
+unit.corvus.weapons.0.shoot.shots: 3,
+unit.corvus.weapons.0.shoot.shotDelay: 20,
+unit.corvus.weapons.0.bullet.damage: 74,
+unit.corvus.weapons.0.bullet.lightningDamage: 17,
+unit.corvus.weapons.0.bullet.buildingDamageMultiplier: 3,
+unit.corvus.weapons.0.bullet.healPercent: 15,
+unit.corvus.weapons.0.bullet.lifetime: 47,
+unit.corvus.weapons.0.shootStatusDuration: 144, 
+unit.corvus.description: "Fires a massive laser blast that damages enemy targets and repairs allied structures. Can step over most terrain.\n\n[gold]DP Changelog[white]:\nHealth: 18000 -> 15000\nArmor: 9 -> 12\n\nHuge attack rework:\n- Shot amount (per attack): 1 -> 3 (single shot was splitted into 3). Corvus does burst attack instead single shot\n	- 74 damage (222 damage to buildings) per shot / 222 damage (666 damage) per burst attack\n	- Reduced healPercentage (25% -> 15%)",
+//corvus
+
+
+unit.crawler.health: 180,
+unit.crawler.speed: 0.8,
+unit.crawler.description: "Moves toward enemy targets and self-destructs, causing a large explosion.\n\n[gold]DP Changelog[white]:\nHealth: 150 -> 180\nSpeed: 7.5/sec -> 6/sec",
+//crawler
+
+unit.atrax.speed: 0.72,
+unit.atrax.health: 390,
+unit.atrax.armor: 3,
+unit.atrax.rotateSpeed: 7.5, 
+unit.atrax.weapons.0.bullet.damage: 12,
+unit.atrax.maxRange: 105.6,
+unit.atrax.range: 96, 
+unit.atrax.description: "Fires debilitating orbs of slag at ground targets. Can step over most terrain.\n\n[gold]DP Changelog[white]:\nHealth: 600 -> 490\nSpeed: 4.5/sec -> 5.4/sec\n\nDamage: 13 -> 12\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotateSpeed\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)",
+//atrax
+
+unit.spiroct.speed: 0.68,
+unit.spiroct.armor: 8,
+unit.spiroct.health: 1100,
+unit.spiroct.rotateSpeed: 7.2, 
+unit.spiroct.description: "Fires sapping laser beams at enemy targets, repairing itself in the process. Can step over most terrain.\n\n[gold]DP Changelog[white]:\nHealth: 1000 -> 1100\nArmor: 5 -> 8\nSpeed: 4.05/sec -> 5.1/sec\n\nIncreased rotateSpeed",
+//spiroct
+
+unit.arkyid.speed: 0.84,
+unit.arkyid.health: 7100,
+unit.arkyid.armor: 10,
+unit.arkyid.weapons.7.bullet.splashDamage: 75,
+unit.arkyid.rotateSpeed: 4, 
+unit.arkyid.description: "Fires large sapping laser beams at enemy targets, repairing itself in the process. Can step over most terrain.\n\n[gold]DP Changelog[white]:\nHealth: 8000 -> 7200\nArmor: 6 -> 11\nSpeed: 4.65/sec -> 6.3/sec\n\nSplashDamage: 65 -> 75\n\n- Increased rotateSpeed",
+//arkyid
+
+unit.toxopid.speed: 0.62,
+unit.toxopid.health: 18000,
+unit.toxopid.armor: 15,
+unit.toxopid.weapons.2.bullet.damage: 65,
+unit.toxopid.weapons.2.bullet.lifetime: 78,
+unit.toxopid.weapons.0.bullet.damage: 180,
+unit.toxopid.rotateSpeed: 2.8,
+unit.toxopid.description: "Fires large electric cluster-shells and piercing lasers at enemy targets. Can step over most terrain.\n\n[gold]DP Changelog[white]:\nHealth: 22000 -> 18000\nArmor: 13 -> 15\nSpeed: 3.75/sec -> 4.65/sec\n\nDamage (Cannon): 50 -> 110\nDamage (Fuse): 110 -> 180\n\n- Increased rotateSpeed", //toxopid
+
+
+unit.flare.weapons.0.reload: 70,
+unit.flare.health: 35,
+unit.flare.rotateSpeed: 7,
+unit.flare.weapons.0.bullet.damage: 15, 
+unit.flare.description: "Fires standard bullets at enemy ground targets.\n\n[gold]DP Changelog[white]:\nHealth: 70 -> 35\n\nSplashDamage: 9 -> 15",
+//flare
+
+unit.horizon.speed: 2.1,
+unit.horizon.armor: 2,
+unit.horizon.health: 110,
+unit.horizon.weapons.0.bullet.splashDamage: 21,
+unit.horizon.weapons.0.bullet.damage: 3,
+unit.horizon.rotateSpeed: 7,
+unit.horizon.description: "Drops clusters of bombs on enemy ground targets.\n\n[gold]DP Changelog[white]:\nHealth: 340 -> 110\nArmor: 3 -> 2\nSpeed: 12.375/sec -> 15.75/sec\n\nSplashDamage: 27 -> 21\n\n- Strongly decreased damage against shields (quasar/projector like)\n- Increased rotatespeed\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)", 
+//horizon
+
+unit.zenith.health: 510,
+unit.zenith.armor: 5,
+unit.zenith.weapons.0.bullet.lifetime: 55,
+unit.zenith.rotateSpeed: 5.2,
+unit.zenith.drag: 0.043,
+unit.zenith.maxRange: 175,
+unit.zenith.range: 168,
+unit.zenith.description: "Fires salvos of missiles at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 700 -> 510\n\nRange: 19.6 -> 21.8\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotateSpeed\n- Slightly changed drag", 
+//zenith
+
+unit.antumbra.armor: 7,
+unit.antumbra.speed: 0.70,
+unit.antumbra.weapons.1.bullet.damage: 31,
+unit.antumbra.weapons.1.bullet.splashDamageRadius: 33,
+unit.antumbra.weapons.1.bullet.lifetime: 63,
+unit.antumbra.weapons.3.bullet.lifetime: 66.5, 
+unit.antumbra.weapons.5.bullet.lifetime: 34.7, 
+unit.antumbra.range: 236,
+unit.antumbra.maxRange: 236,
+unit.antumbra.description: "Fires a barrage of bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nArmor: 9 -> 7\nSpeed: 6/sec -> 5.25/sec\n\nDamage (missiles): 18 -> 31\nSplashDamageRadius: 2.5 -> 4.1 tiles\nRange: 21.3 -> 28\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)", 
+//antumbra
+
+unit.eclipse.speed: 0.56,
+unit.eclipse.armor: 15,
+unit.eclipse.rotateSpeed: 1.3,
+unit.eclipse.weapons.1.bullet.damage: 130,
+unit.eclipse.weapons.3.bullet.damage: 35,
+unit.eclipse.weapons.5.bullet.damage: 35,
+unit.eclipse.weapons.1.bullet.length: 236,
+unit.eclipse.weapons.3.bullet.lifetime: 60,
+unit.eclipse.weapons.5.bullet.lifetime: 60,
+unit.eclipse.maxRange: 232,
+unit.eclipse.range: 248,
+unit.eclipse.description: "Fires two piercing lasers and a barrage of flak at enemy targets.\n\n[gold]DP Changelog[white]:\nArmor: 13 -> 15\nSpeed: 4.05/sec -> 4.2/sec\n\nDamage (artillely): 15 -> 35\nDamage (laser): 115 -> 130\nRange: 28.2 -> 29\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)", 
+//eclipse
+
+
+unit.poly.health: 130,
+unit.poly.armor: 1, 
+unit.poly.buildSpeed: 0.3,
+unit.poly.weapons.0.bullet.healPercent: 2,
+unit.poly.weapons.0.bullet.healAmount: 10,
+unit.poly.abilities.0.reload: 112,
+unit.poly.description: "Automatically rebuilds destroyed structures and assists other units in construction.\n\n[gold]DP Changelog[white]:\nHealth: 400 -> 130\nArmor: 0 -> 1\n\nHealPercent: 5.5% -> 2%\nHealAmount (direct repair): 0 -> 10\n\n- Decreased buildspeed (50% -> 30%)\n- Increased repair field (0.62/sec -> 2.67/sec)\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)", 
+//poly
+
+unit.mega.speed: 2.04,
+unit.mega.health: 330,
+unit.mega.rotateSpeed: 7,
+unit.mega.armor: 2,
+unit.mega.drag: 0.04,
+unit.mega.weapons.0.bullet.healPercent: 2.5,
+unit.mega.weapons.0.bullet.healAmount: 12,
+unit.mega.weapons.2.bullet.healPercent: 2,
+unit.mega.weapons.2.bullet.healAmount: 10,
+unit.mega.description: "Automatically repairs damaged structures. Capable of carrying blocks and small ground units.\n\n[gold]DP Changelog[white]:\nHealth: 460 -> 330\nArmor: 3 -> 2\nSpeed: 18.75/sec -> 15.3/sec\n\nHealPercentage: 5.5% -> 2% / 3% -> 2%\nHealAmount: 0 -> 12 / 0 -> 10\n\n- Increased rotatespeed and drag", 
+//mega
+
+unit.quad.buildSpeed: 3.5,
+unit.quad.rotateSpeed: 3,
+unit.quad.description: "Drops plasma bombs on ground targets, repairing allied structures and damaging enemy ground targets. Capable of carrying medium-sized ground units.\n\n[gold]DP Changelog[white]:\nBuildSpeed: 300% -> 350%\n\n- Increased rotatespeed", 
+//quad
+
+unit.oct.armor: 13,
+unit.oct.health: 18000,
+unit.oct.speed: 0.7,
+unit.oct.rotateSpeed: 3,
+unit.oct.abilities.0.regen: 10,
+unit.oct.abilities.0.max: 12000,
+unit.oct.abilities.1.amount: 300,
+unit.oct.description: "Protects nearby allies with a regenerating shield. Capable of carrying most ground units.\n\n[gold]DP Changelog[white]:\nHealth: 24000 -> 18000\nArmor: 16 -> 13\nSpeed: 6/sec -> 5.25/sec\n\nMax Shield: 7000 -> 12000\nRepair Speed (Shield): 240/sec -> 600/sec\n\nRepair Speed (Repair Field): 65/sec -> 150/sec\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotatespeed", 
+//oct
+
+
+unit.risso.speed: 1.03,
+unit.risso.health: 210,
+unit.risso.weapons.0.bullet.lifetime: 48,
+unit.risso.rotateSpeed: 8, 
+unit.risso.maxRange: 188.8, 
+unit.risso.range: 180,
+unit.risso.description: "Fires a barrage of missiles and bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 280 -> 210\nSpeed: 8.25/sec -> 7.725/sec\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotatespeed", 
+//risso
+
+unit.minke.speed: 0.82,
+unit.minke.health: 270,
+unit.minke.weapons.1.bullet.lifetime: 67,
+unit.minke.weapons.0.bullet.lifetime: 46,
+unit.minke.rotateSpeed: 7,
+unit.minke.maxRange: 196.8, 
+unit.minke.range: 195,
+unit.minke.description: "Fires shells and standard bullets at enemy ground targets.\n\n[gold]DP Changelog[white]:\nHealth: 600 -> 270\nSpeed: 6.75/sec -> 6.15/sec\n\nRange: 27 -> 24.6\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)\n- Increased rotatespeed", 
+//minke
+
+unit.bryde.speed: 0.78,
+unit.bryde.health: 710,
+unit.bryde.armor: 10,
+unit.bryde.weapons.0.bullet.lifetime: 75,
+unit.bryde.rotateSpeed: 5.5, 
+unit.bryde.range: 232, 
+unit.bryde.maxRange: 236,
+unit.bryde.description: "Fires long-range artillery shells and missiles at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 910 -> 710\nArmor: 7 -> 10\nSpeed: 6.375/sec -> 5.85/sec\n\nRange: 33.1 -> 29.5\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotatespeed", 
+//bryde
+
+unit.sei.speed: 0.76,
+unit.sei.weapons.0.bullet.lifetime: 56,
+unit.sei.weapons.1.bullet.lifetime: 32,
+unit.sei.armor: 15,
+unit.sei.rotateSpeed: 2.7, 
+unit.sei.maxRange: 251.2,
+unit.sei.range: 250,
+unit.sei.description: "Fires a barrage of missiles and armor-piercing bullets at enemy targets.\n\n[gold]DP Changelog[white]:\nArmor: 12 -> 15\nSpeed: 5.475/sec -> 5.7/sec\n\nRange: 35.2 -> 31.4\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotatespeed", 
+//sei
+
+unit.omura.speed: 0.53,
+unit.omura.health: 21000,
+unit.omura.weapons.0.bullet.length: 468,
+unit.omura.rotateSpeed: 2.4,
+unit.omura.maxRange: 464,
+unit.omura.range: 463,
+unit.omura.description: "Fires a long-range piercing railgun bolt at enemy targets.\n\n[gold]DP Changelog[white]:\nHealth: 22000 -> 21000\nSpeed: 4.65/sec -> 3.975/sec\n\nRange: 62 -> 58\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotatespeed", 
+//omura
+
+
+unit.retusa.rotateSpeed: 9,
+unit.retusa.maxRange: 154,
+unit.retusa.range: 152,
+unit.retusa.health: 230,
+unit.retusa.description: "Fires homing torpedoes at enemy targets. Repairs allied units.\n\n[gold]DP Changelog[white]:\nHealth: 270 -> 230\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n- Increased rotateSpeed", 
+//retusa
+
+unit.oxynoe.weapons.2.reload: 30,
+unit.oxynoe.rotateSpeed: 8,
+unit.oxynoe.health: 310,
+unit.oxynoe.description: "Fires structure-repairing streams of flame at enemy targets. Targets enemy projectiles with a point defense turret.\n\n[gold]DP Changelog[white]:\nHealth: 560 -> 310\n\nFirerate (Point Defense): 6.66/sec -> 2/sec\n\n- Decreased T2 unit cost (40 silicon/40 graphite -> 30 silicon/30 graphite)\n- Increased rotatespeed", 
+//oxynoe
+
+unit.cyerce.speed: 0.775,
+unit.cyerce.health: 720,
+unit.cyerce.weapons.0.repairSpeed: 0.57,
+unit.cyerce.armor: 7,
+unit.cyerce.rotateSpeed: 6.5,
+unit.cyerce.description: "Fires seeking cluster-missiles at enemy targets. Repairs allied units.\n\n[gold]DP Changelog[white]:\nHealth: 870 -> 720\nArmor: 9 -> 7\nSpeed: 6.45/sec -> 5.812/sec\n\nRepair Speed: 42/sec -> 34/sec\n\n- Increased rotatespeed", 
+//cyerce
+
+unit.aegires.speed: 0.75,
+unit.aegires.health: 9000,
+unit.aegires.rotateSpeed: 2.6,
+unit.aegires.description: "Shocks all enemy units and structures that enter its energy field. Repairs all allies.\n\n[gold]DP Changelog[white]:\nHealth: 12000 -> 9000\nSpeed: 5.25/sec -> 5.625/sec\n\n- Increased rotatespeed", 
+//aegires 
+
+unit.navanax.speed: 0.695,
+unit.navanax.health: 23000,
+unit.navanax.armor: 22,
+unit.navanax.rotateSpeed: 2.5,
+//unit.navanax.weapons.1.reload: 110,
+//unit.navanax.weapons.1.bullet.length: 170,
+unit.navanax.weapons.2.reload: 110,
+unit.navanax.weapons.2.bullet.length: 170,
+unit.navanax.weapons.3.reload: 110,
+unit.navanax.weapons.3.bullet.length: 170,
+unit.navanax.weapons.4.reload: 110,
+unit.navanax.weapons.4.bullet.length: 170,
+unit.navanax.weapons.5.reload: 110,
+unit.navanax.weapons.5.bullet.length: 170,
+unit.navanax.weapons.0.bullet.damage: 30,
+unit.navanax.weapons.0.bullet.splashDamage: 210,
+unit.navanax.weapons.0.bullet.speed: 8,
+unit.navanax.weapons.0.bullet.lifetime: 35,
+unit.navanax.maxRange: 276,
+unit.navanax.range: 272,
+unit.navanax.description: "Fires explosive EMP projectiles, dealing significant damage to enemy power networks and repairing allied structures. Melts enemy targets with 4 autonomous laser turrets.\n\n[gold]DP Changelog[white]:\nHealth: 20000 -> 23000\nArmor: 16 -> 22\nSpeed: 4.875/sec -> 5.212/sec\n\nDamage (cannon): 60 -> 30\nSplashDamage (cannon): 70 -> 210\nRange: 37 -> 34.5\n\n- Slighty adjusted range and maxRange (range description and actual range attack are more closer to each one)\n-Strongly increased cannon bullet speed\n- Strongly increased lenghth and reload scorch-like attack\n- Increased rotatespeed", 
+//navanax
+
+
+
+
+
+block.duo.ammoTypes.copper.damage: 12,
+block.duo.ammoTypes.copper.buildingDamageMultiplier: 0.5,
+block.duo.ammoTypes.silicon.damage: 15,
+block.duo.ammoTypes.silicon.buildingDamageMultiplier: 0.5,
+block.duo.ammoTypes.graphite.damage: 21, 
+block.duo.ammoTypes.graphite.buildingDamageMultiplier: 0.5,
+block.duo.ammoTypes.graphite.reloadMultiplier: 0.7, 
+block.duo.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires alternating bullets at enemies.\n\n[gold]DP Changelog[white]:\nCopper:\n- Damage: 9 -> 12\n\nSilicon:\n- Damage: 12 -> 15\n\nGraphite:\n- Damage: 18 -> 21\n- ReloadMultiplier: 0.8 (-20% firerate) -> 0.7 (-30% firerate)",
+//duo
+
+block.scatter.ammoTypes.scrap.splashDamage: 28, 
+block.scatter.ammoTypes.scrap.splashDamageRadius: 26.4, //scatter
+
+block.scatter.ammoTypes.lead.splashDamage: 21, 
+block.scatter.ammoTypes.lead.splashDamageRadius: 18.4, //scatter
+block.scatter.ammoTypes.lead.ammoMultiplier: 3,
+
+block.scatter.ammoTypes.metaglass.splashDamageRadius: 16.8, 
+block.scatter.ammoTypes.metaglass.splashDamage: 24,
+block.scatter.ammoTypes.metaglass.fragBullet.damage: 5, 
+block.scatter.ammoTypes.metaglass.fragBullets: 4,
+block.scatter.ammoTypes.metaglass.reloadMultiplier: 0.7, //scatter
+
+block.scatter.coolantMultiplier: 7.5,
+block.scatter.rotateSpeed: 12, 
+block.scatter.description: "Burns any ground enemies close to it. Highly effective at close range.\n\n[gold]DP Changelog[white]:\nScrap:\n- SplashDamage: 33 -> 24\n- SplashDamageRadius: 3.0 tiles -> 3.3 tiles \n\nLead:\n- SplashDamage: 40 -> 21\n- SplashDamageRadius: 1.8 tiles -> 2.3 tiles\n\nMetaglass:\n- SplashDamage: 45 -> 24\n- SplashDamageRadius: 2.5 tiles -> 2.1 tiles\n- ReloadMultiplier: 0.8 (-20% firerate) -> 0.7 (-30% firerate)\n- Minor frag damage/amount changes",
+//scatter
+
+block.scorch.ammoTypes.pyratite.damage: 35,
+block.scorch.ammoTypes.pyratite.rangeChange: 24, 
+block.scorch.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires clumps of lead, scrap or metaglass flak at enemy aircraft.\n\n[gold]DP Changelog[white]:\nPyratite:\n- Damage: 30 -> 35\n- RangeChange: +3 tiles\n\n BuildCost changes: 40 copper/17 graphite -> 25 copper/22 graphite",
+block.scorch.ammoTypes.coal.buildingDamageMultiplier: 0.5,
+block.scorch.ammoTypes.pyratite.buildingDamageMultiplier: 0.5,
+//scorch
+
+block.hail.ammoTypes.silicon.splashDamage: 27,
+block.hail.ammoTypes.pyratite.splashDamageRadius: 23,
+block.hail.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires small shells at ground enemies over long distances.\n\n[gold]DP Changelog[white]:\nsilicon:\n- SplashDamage: 33 -> 27\n\nPyratite:\n- SplashDamageRadius: 2.3 tiles -> 2.8 tiles\n\nBuildCost changes: 40 copper/17 graphite -> 30 copper/13 graphite",
+block.hail.ammoTypes.pyratite.buildingDamageMultiplier: 0.5,
+block.hail.ammoTypes.graphite.buildingDamageMultiplier: 0.5,
+block.hail.ammoTypes.silicon.buildingDamageMultiplier: 0.5,
+//hail
+
+block.wave.ammoTypes.slag.rangeChange: 24,
+block.wave.ammoTypes.slag.lifetime: 44,
+block.wave.ammoTypes.oil.rangeChange: 24,
+block.wave.ammoTypes.oil.lifetime: 44,
+block.wave.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires streams of liquid at enemies. Automatically extinguishes fires when supplied with water.\n\n[gold]DP Changelog[white]:\nMinor rangeChange changes (for oil and slag)",
+block.wave.ammoTypes.slag.buildingDamageMultiplier: 0.5,
+//wave
+
+block.lancer.shootType.damage: 120,
+block.lancer.rotateSpeed: 4,
+block.lancer.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nCharges and fires powerful beams of energy at ground targets.\n\n[gold]DP Changelog[white]:\nDamage: 140 -> 120\n\nSlightly decreased rotatespeed",
+block.lancer.shootType.buildingDamageMultiplier: 0.5,
+//lancer
+
+block.arc.shootType.damage: 13,
+block.arc.reload: 32, 
+block.arc.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires arcs of electricity at ground targets.\n\n[gold]DP Changelog[white]:\nDamage: 20 -> 13\nFirerate: 1.714/sec -> 1.875",
+block.arc.shootType.buildingDamageMultiplier: 0.5,
+//arc
+
+block.swarmer.ammoTypes.blast-compound.splashDamage: 32,
+block.swarmer.ammoTypes.blast-compound.damage: 10,
+block.swarmer.ammoTypes.blast-compound.splashDamageRadius: 38,
+block.swarmer.ammoTypes.blast-compound.ammoMultiplier: 3, 
+block.swarmer.ammoTypes.blast-compound.buildingDamageMultiplier: 0.5,//swarmer
+
+block.swarmer.ammoTypes.pyratite.splashDamage: 31,
+block.swarmer.ammoTypes.pyratite.damage: 12,
+block.swarmer.ammoTypes.pyratite.splashDamageRadius: 37,
+block.swarmer.ammoTypes.pyratite.ammoMultiplier: 3,
+block.swarmer.ammoTypes.pyratite.buildingDamageMultiplier: 0.5, //swarmer
+ 
+block.swarmer.ammoTypes.surge-alloy.splashDamage: 32,
+block.swarmer.ammoTypes.surge-alloy.splashDamageRadius: 26,
+block.swarmer.ammoTypes.surge-alloy.reloadMultiplier: 0.8,
+block.swarmer.ammoTypes.surge-alloy.damage: 15,
+block.swarmer.ammoTypes.surge-alloy.buildingDamageMultiplier: 0.5,
+
+
+
+block.swarmer.rotateSpeed: 4, 
+block.swarmer.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires homing missiles at enemies.\n\n[gold]DP Changelog[white]:\nBlast-Compound:\n- Damage: 10 -> 13\n- SplashDamage: 45 -> 27\n- SplashDamageRadius: 3.7 tiles -> 4.3 tiles\n- Ammo Multiplier: 5 -> 3\n\nPyratite:\n- SplashDamage: 45 -> 31\n- SplashDamageRadius: 2.5 tiles -> 4.6 tiles\n- Ammo Multiplier: 5 -> 3\n\nSurge Alloy:\n- Damage: 18 -> 15\n- SplashDamage: 35 -> 32\n- SplashDamageRadius: 3.2 tiles -> 3.1 tiles\n- Ammo Multiplier: 5 -> 3",
+//swarmer
+
+block.salvo.ammoTypes.copper.damage: 13,
+block.salvo.ammoTypes.copper.knockback: 0.6,
+block.salvo.ammoTypes.copper.armorMultiplier: 1,
+block.salvo.ammoTypes.copper.buildingDamageMultiplier: 0.5,
+
+block.salvo.ammoTypes.graphite.damage: 27,
+block.salvo.ammoTypes.graphite.reloadMultiplier: 0.7,
+block.salvo.ammoTypes.graphite.knockback: 1.8,
+block.salvo.ammoTypes.graphite.buildingDamageMultiplier: 0.5,
+
+block.salvo.ammoTypes.pyratite.knockback: 1.7,
+block.salvo.ammoTypes.pyratite.pierceCap: 2,
+block.salvo.ammoTypes.pyratite.pierceBuilding: false,
+block.salvo.ammoTypes.pyratite.buildingDamageMultiplier: 0.5,
+
+block.salvo.ammoTypes.silicon.damage: 21,
+block.salvo.ammoTypes.silicon.reloadMultiplier: 1.3,
+block.salvo.ammoTypes.silicon.knockback: 0.7,
+block.salvo.ammoTypes.silicon.buildingDamageMultiplier: 0.5,
+
+block.salvo.ammoTypes.thorium.reloadMultiplier: 0.7,
+block.salvo.ammoTypes.thorium.knockback: 2.1,
+block.salvo.ammoTypes.thorium.armorMultiplier: 1,
+block.salvo.ammoTypes.thorium.pierceCap: 2,
+block.salvo.ammoTypes.thorium.pierceBuilding: false,
+block.salvo.ammoTypes.thorium.buildingDamageMultiplier: 0.5,
+ 
+block.salvo.reload: 32,
+block.salvo.inaccuracy: 5, 
+block.salvo.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires quick salvos of bullets at enemies.\n\n[gold]DP Changelog[white]:\nCopper:\n- Damage: 15 -> 13\n- Removed armor multiplier\n\nGraphite:\n- Damage: 31 -> 27\n- Firerate: x0.8 (-20%) -> x0.7 (-30%)\n\nPyratite:\n- Added x2 pierce (except buildings)\n\nSilicon:\n- Damage: 23 -> 21\n- Firerate: x1.5 (+50%) -> x1.3 (+30%)\n\nThorium:\n- Firerate: 1x (0%) -> x0.7 (-30%)\n- Removed armorMultiplier\n- Added x2 pierce (except buildings)\n\nStrongly reduced buildcost (100 copper/80 graphite/50 titanium -> 120 copper/50 graphite/35 titanium)\nAdded knockback for all ammo types",
+//salvo 
+
+block.tsunami.ammoTypes.slag.rangeChange: 32,
+block.tsunami.ammoTypes.slag.lifetime: 58,
+block.tsunami.ammoTypes.oil.rangeChange: 32,
+block.tsunami.ammoTypes.oil.lifetime: 58, 
+block.tsunami.ammoTypes.cryofluid.rangeChange: 20,
+block.tsunami.ammoTypes.cryofluid.lifetime: 56, 
+block.tsunami.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires powerful streams of liquid at enemies. Automatically extinguishes fires when supplied with water.\n\n[gold]DP Changelog[white]:\nMinor RangeChange changes (extended range for oil, slag, cryo)",
+block.tsunami.ammoTypes.slag.buildingDamageMultiplier: 0.5,
+block.tsunami.ammoTypes.oil.buildingDamageMultiplier: 0.5,
+block.tsunami.ammoTypes.cryofluid.buildingDamageMultiplier: 0.5,
+block.tsunami.ammoTypes.water.buildingDamageMultiplier: 0.5,
+//tsunami
+
+
+block.ripple.ammoTypes.graphite.width: 16,
+block.ripple.ammoTypes.graphite.height: 16, 
+block.ripple.ammoTypes.graphite.splashDamage: 75,
+block.ripple.ammoTypes.graphite.buildingDamageMultiplier: 0.5, //ripple
+
+block.ripple.ammoTypes.silicon.splashDamage: 72, 
+block.ripple.ammoTypes.silicon.splashDamageRadius: 18,
+block.ripple.ammoTypes.silicon.buildingDamageMultiplier: 0.5, //ripple
+
+block.ripple.ammoTypes.plastanium.splashDamage: 70, 
+block.ripple.ammoTypes.plastanium.fragBullets: 7,
+block.ripple.ammoTypes.plastanium.fragBullet.damage: 15,
+block.ripple.ammoTypes.plastanium.buildingDamageMultiplier: 0.5, 
+block.ripple.ammoTypes.plastanium.fragBullet.buildingDamageMultiplier: 0.5, //ripple
+
+block.ripple.ammoTypes.pyratite.splashDamage: 90,
+block.ripple.ammoTypes.pyratite.splashDamageRadius: 37,
+block.ripple.ammoTypes.pyratite.width: 17,
+block.ripple.ammoTypes.pyratite.height: 17, 
+block.ripple.ammoTypes.pyratite.ammoMultiplier: 3,
+block.ripple.ammoTypes.pyratite.buildingDamageMultiplier: 0.5, //ripple
+
+block.ripple.ammoTypes.blast-compound.width: 18,
+block.ripple.ammoTypes.blast-compound.height: 18,
+block.ripple.ammoTypes.blast-compound.splashDamageRadius: 42,
+block.ripple.ammoTypes.blast-compound.splashDamage: 120,
+block.ripple.ammoTypes.blast-compound.ammoMultiplier: 2,
+block.ripple.ammoTypes.blast-compound.reloadMultiplier: 0.7, 
+block.ripple.ammoTypes.blast-compound.buildingDamageMultiplier: 0.5,
+block.ripple.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nShoots clusters of shells at ground enemies over long distances.\n\n[gold]DP Changelog[white]:\nGraphite:\n- SplashDamage: 70 -> 75\n\nSilicon:\n- SplashDamage: 70 -> 72\n- SplashDamageRadius: 2.8 tiles -> 2.2 tiles\n\nPlastanium:\n- SplashDamage: 90 -> 70\n- FragBullets: 15 -> 7\n- Damage: 14 -> 15\n\nPyratite:\n- SplashDamageRadius: 2.8 -> 4.6\n- AmmoMultiplier: 4 -> 3\n\nBlast Compound:\n- SplashDamage: 90 -> 120\n- SplashDamageMultiplier: 4.6 -> 5.2\n- Ammo Multiplier: 4 -> 2\n- ReloadMultiplier: x1 (0%) -> x0.7 (-30%)\n\nMinor width/height bullet changes\nStrongly reduced buildcost (150 copper/135 graphite/60 titanium -> 175 copper/90 graphite/70 titanium)",
+//ripple
+
+
+block.cyclone.ammoTypes.metaglass.damage: 12,
+block.cyclone.ammoTypes.metaglass.splashDamage: 32,
+block.cyclone.ammoTypes.metaglass.fragBullets: 10,
+block.cyclone.ammoTypes.metaglass.fragBullet.damage: 8,
+block.cyclone.ammoTypes.metaglass.ammoMultiplier: 5,
+block.cyclone.ammoTypes.metaglass.reloadMultiplier: 1,
+block.cyclone.ammoTypes.metaglass.fragBullet.buildingDamageMultiplier: 0.3,
+block.cyclone.ammoTypes.metaglass.buildingDamageMultiplier: 0.5,
+//cyclone
+
+block.cyclone.ammoTypes.plastanium.splashDamage: 35,
+block.cyclone.ammoTypes.plastanium.damage: 15, 
+block.cyclone.ammoTypes.plastanium.buildingDamageMultiplier: 0.5, //cyclone
+
+block.cyclone.ammoTypes.blast-compound.damage: 12,
+block.cyclone.ammoTypes.blast-compound.splashDamage: 57, 
+block.cyclone.ammoTypes.blast-compound.buildingDamageMultiplier: 0.5, //cyclone
+
+block.cyclone.ammoTypes.surge-alloy.splashDamageRadius: 35,
+block.cyclone.ammoTypes.surge-alloy.lightning: 3,
+block.cyclone.ammoTypes.surge-alloy.lightningDamage: 12,
+block.cyclone.ammoTypes.surge-alloy.reloadMultiplier: 0.8,
+block.cyclone.ammoTypes.surge-alloy.buildingDamageMultiplier: 0.5, //cyclone
+
+block.cyclone.rotateSpeed: 7, 
+block.cyclone.coolantMultiplier: 3.33334, 
+block.cyclone.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires explosive clumps of flak at nearby enemies.\n\n[gold]DP Changelog[white]:\nMetaglass:\n- Damage: 6 -> 12\nSplashDamage: 45 -> 32\nFragBullets: 6 -> 10\n- FragBulletDamage: 12 -> 8\n- AmmoMultiplier: 2 -> 5\n- ReloadMultiplier: x0.8 (-20%) -> x1 (0%)\n- FragBuildingDamageMultiplier: x1 (0%) -> x0.3 (-70%)\n\nPlastanium:\n- Damage: 8 -> 15\n- SplashDamage: 37 -> 35\n\nBlast Compound:\n- Damage: 8 -> 12\n- SplashDamage: 45 -> 57\n\nSurge Alloy:\n- SplashDamageRadius: 4.7 tiles -> 4.3 tiles\n- Lightning: 2 -> 3\n- LightningDamage: 13 -> 12\n- ReloadMultiplier: x1 (0%) -> x0.8 (-20%)\n\n Slightly nerfed rotateSpeed\nDecreased coolantMultiplier (160%/235% -> 140%/190%)",
+//cyclone //todo parallax and wreck nerf
+
+block.spectre.reload: 8,
+block.spectre.rotateSpeed: 1.4,
+block.spectre.range: 273,
+block.spectre.maxAmmo: 90,
+block.spectre.coolantMultiplier: 1.0, //spectre
+
+block.spectre.ammoTypes.graphite.ammoMultiplier: 3,
+block.spectre.ammoTypes.graphite.damage: 75,
+block.spectre.ammoTypes.graphite.knockback: 1.3,
+block.spectre.ammoTypes.graphite.buildingDamageMultiplier: 0.5, //spectre
+
+block.spectre.ammoTypes.thorium.damage: 120,
+block.spectre.ammoTypes.thorium.knockback: 1.7,
+block.spectre.ammoTypes.thorium.buildingDamageMultiplier: 0.5,  //spectre
+
+block.spectre.ammoTypes.pyratite.damage: 110,
+block.spectre.ammoTypes.pyratite.ammoMultiplier: 2,
+block.spectre.ammoTypes.pyratite.splashDamage: 32,
+block.spectre.ammoTypes.pyratite.knockback: 1.2,  
+block.spectre.ammoTypes.pyratite.buildingDamageMultiplier: 0.5,
+block.spectre.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires large bullets at air and ground targets.\n\n[gold]DP Changelog[white]:\nGraphite:\n- Damage: 50 -> 75\n- AmmoMultiplier: 4 -> 3\n\nThorium:\n- Damage: 80 -> 120\n\nPyratite:\n- Damage: 70 -> 110\n- SplashDamage: 20 -> 32\n- Ammo Multiplier: 3 -> 2\n\nStrongly increased knockback for all ammo types\nStrongly reduced buildcost (900 copper/300 graphite/250 thorium/175 plastanium/250 surge-alloy -> 750 copper/275 graphite/250 thorium/150 plastanium/175 surge-alloy)\n- Increased coolant buff (120%/145% -> 140%/190%)",
+//spectre
+
+block.meltdown.rotateSpeed: 1.4,
+block.meltdown.reload: 170,
+block.meltdown.shootDuration: 310,
+block.meltdown.shootType.damage: 130,
+block.meltdown.shootType.knockback: 1.5, 
+block.meltdown.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nCharges and fires a persistent laser beam at nearby enemies. Requires coolant to operate.\n\n[gold]DP Changelog[white]:\n- Damage (Damage/Sec): 78/936 -> 130/1560\n- FiringRate: 0.666/sec -> 0.352/sec\n\n[][EXPERIMENTAL][white]Added knockback (1.5) for turret (might be removed)\nIncreased shootDuration/Reload",
+block.meltdown.shootType.buildingDamageMultiplier: 0.5,
+//meltdown
+
+block.foreshadow.reload: 240, 
+block.foreshadow.rotateSpeed: 1.3,
+block.foreshadow.ammoTypes.surge-alloy.buildingDamageMultiplier: 0.25, 
+block.foreshadow.coolantMultiplier: 1.0, 
+block.foreshadow.description: "[scarlet]! Global building damage nerf (50%) ![gray]\n\nFires a large single-target bolt over long distances. Prioritizes enemies with higher max health.\n\n[gold]DP Changelog[white]:\n- FireRate: 0.3/sec -> 0.25/sec\n- BuildingDamageMultiplier: x0.2 (-80%) -> x0.5 (-50%)\n\nReduced rotateSpeed\nIncreased coolant buff (116%/136% -> 140%/190%)",
+//foreshadow
+
+
+block.core-shard.armor: 3,
+block.core-shard.health: 2000,
+block.core-shard.description: "Core of the base. Once destroyed, the sector is lost.\n\n[gold]DP Changelog[white]:\n- Health: 1100 -> 2000\n- Armor: 0 -> 3",
+block.core-foundation.armor: 5,
+block.core-foundation.description: "Core of the base. Well armored. Stores more resources than a Shard.\n\n[gold]DP Changelog[white]:\n- Armor: 0 -> 5",
+block.core-nucleus.armor: 8, 
+block.core-nucleus.health: 9000,
+block.core-nucleus.description: "Core of the base. Extremely well armored. Stores massive amounts of resources.\n\n[gold]DP Changelog[white]:\n- Health: 6000 -> 9000\n- Armor: 0 -> 8",
+//core
+
+block.plastanium-wall.health: 640,
+block.plastanium-wall.description: "Protects structures from enemy projectiles. Absorbs lasers and electric arcs. Blocks automatic power connections.\n\n[gold]DP Changelog[white]:\n- Health: 500 -> 640",
+block.plastanium-wall-large.health: 2560,
+block.plastanium-wall-large.description: "Protects structures from enemy projectiles. Absorbs lasers and electric arcs. Blocks automatic power connections.\n\n[gold]DP Changelog[white]:\n- Health: 2000 -> 2560",
+block.phase-wall.health: 720,
+block.phase-wall.description: "Protects structures from enemy projectiles, reflecting most bullets upon impact.\n\n[gold]DP Changelog[white]:\n- Health: 600 -> 720",
+block.phase-wall-large.health: 2880,
+block.phase-wall-large.description: "Protects structures from enemy projectiles, reflecting most bullets upon impact.\n\n[gold]DP Changelog[white]:\n- Health: 2400 -> 2880",
+block.surge-wall.health: 980,
+block.surge-wall.description: "Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.\n\n[gold]DP Changelog[white]:\n- Health: 920 -> 980",
+block.surge-wall-large.health: 3920,
+block.surge-wall-large.description: "Protects structures from enemy projectiles, periodically releasing electric arcs upon contact.\n\n[gold]DP Changelog[white]:\n- Health: 3680 -> 3920",
+//walls
+
+block.shock-mine.damage: 15,
+block.shock-mine.tendrils: 7,
+block.shock-mine.health: 80,
+block.shock-mine.description: "Releases electric arcs upon enemy unit contact.\n\n[gold]DP Changelog[white]:\n- Damage:25 -> 15\n- Tendrills: 4 -> 7\n- Health: 50 -> 80",
+
+block.force-projector.shieldHealth: 1200,
+block.force-projector.description: "Creates a hexagonal force field around itself, protecting buildings and units inside from damage.\nOverheats if too much damage is sustained. Optionally uses coolant to prevent overheating. Phase fabric increases shield size.\n\n[gold]DP Changelog[white]:\n- Shield Health: 750 -> 1200\n- Slightly decreased buildcost (100 lead/75 titanium/125 silicon -> 120 lead/75 titanium/95 silicon)",
+
+block.repair-turret.repairSpeed: 2
+block.repair-turret.description: "Continuously repairs the closest damaged unit in its vicinity. Optionally accepts coolant.\n\n[gold]DP Changelog[white]:\n- Repair Speed: 180/sec -> 120/sec",
+
+block.additive-reconstructor.consumes:{remove:"all",items:[ silicon/30, graphite/30 ],power:3},
+block.additive-reconstructor.description: "Upgrades inputted units to the second tier.\n\n[gold]DP Changelog[white]:\nDecreased buildcost for T2 units (40 graphite/40 silicon -> 30 graphite/30 silicon",
+block.air-factory.requirements: [copper/70, lead/120, titanium/35],
+block.air-factory.description: "Produces air units. Output units can be used directly, or moved into reconstructors for upgrading.\n\n[gold]DP Changelog[white]:\nChanged buildcost (60 copper/70 lead/60 silicon -> 70 copper/120 lead/35 titanium)",
+block.ground-factory.plans.2.requirements: [silicon/25, lead/10, titanium/15],
+block.ground-factory.plans.0.requirements: [silicon/15, lead/10],
+block.ground-factory.description: "Produces ground units. Output units can be used directly, or moved into reconstructors for upgrading.\n\n[gold]DP Changelog[white]:\n- Increased unitbuildcost for dagger (10 silicon/10 lead -> 15 silicon/10 lead)\n- Decreased unitbuildcost for nova (30 silicon/20 lead/20 titanium -> 25 silicon/10 lead/15 titanium)",
+block.salvo.requirements: [copper/120, graphite/50, titanium/35],
+block.spectre.requirements: [copper/750, graphite/275, thorium/250, plastanium/150, surge-alloy/175],
+block.ripple.requirements: [copper/175, graphite/90, titanium/70],
+block.force-projector.requirements: [lead/120, titanium/75, silicon/95],
+block.overdrive-projector.requirements: [lead/210, titanium/75, silicon/75, plastanium/35],
+block.overdrive-projector.description: "Increases the speed of nearby buildings.\nOptionally uses phase fabric to boost range and efficiency. Does not stack.n\n[gold]DP Changelog[white]:\nSlightly increased buildcost (100 lead/75 titanium/75 silicon/30 plastanium -> 210 lead/75 titanium/75 silicon/35 plastanium)",
+block.overdrive-dome.requirements: [lead/720, titanium/210, silicon/170, plastanium/150, surge-alloy/175],
+block.overdrive-dome.description: "Increases the speed of nearby buildings. Requires phase fabric and silicon to operate. Does not stack.\n\n[gold]DP Changelog[white]:\nStrongly increased buildcost (200 lead/130 titanium/130 silicon/80 plastanium/120 surge-alloy -> 720 lead/210 titanium/170 silicon/150 plastanium/175 surge-alloy)",
+block.hail.requirements: [copper/30, graphite/13],
+block.scorch.requirements: [copper/40, graphite/17],
+
+
+status.burning.reloadMultiplier: 0.92,
+status.burning.damage: 0.3,
+status.burning.speedMultiplier: 0.92,
+status.freezing.description:"Did you know that freezing damage in game counts as anti-armor? I dont know how it works aaaaa",
+status.freezing.transitionDamage: 12,
+status.wet.transitionDamage: 13,

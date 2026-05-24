@@ -38,7 +38,7 @@ team-change-leader = [accent]Now {player}[accent] is the team leader.
 
 [commands.lb]
 description = Show the current leaderboard.
-params = []
+params =
 
 title = [accent]Leaderboard
       = {time} [white]remaining
@@ -47,14 +47,14 @@ title = [accent]Leaderboard
 player = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} hexes)
 
 [commands.spectate]
-description = Switch to spectator mode or return to the game.
-params = []
+# description = Switch to spectator mode or return to the game.
+# params =
 game = Returning to the game.
 spectator = Switching to spectator mode.
 
 [commands.join]
 description = Invite to join a team.
-params = []
+params =
 title = Available players
 sent = {player}[white] wants to join your team.
      = Enter [accent]/accept
@@ -62,7 +62,7 @@ invite-sent = [green]Invitation sent
 
 [commands.accept]
 description = Accept a player into the team.
-params = []
+params =
 title = Team invites
 not-leader = [scarlet]Only the team leader can do this.
 no-players = [scarlet]No available invites.

@@ -12,6 +12,7 @@ import hexed.Renderer
 import hexed.generation.Generator
 import hexed.generation.Generators
 import mindurka.api.RoundEndEvent
+import mindurka.coreplugin.CorePlugin
 import mindustry.Vars
 import mindustry.game.EventType
 import mindustry.game.EventType.GameOverEvent
@@ -133,6 +134,7 @@ object Game {
     }
 
     fun rtv(nextGenerator: Generator) {
+        if (CorePlugin.restarting) return
         if (restarting) return
         restarting = true
 

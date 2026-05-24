@@ -37,7 +37,7 @@ team-change-leader = [accent]Теперь {player}[accent] лидер коман
 
 [commands.lb]
 description = Показать таблицу лидеров.
-params = []
+params =
 
 title = [accent]Таблица лидеров
       = {time} [white]осталось
@@ -46,14 +46,14 @@ title = [accent]Таблица лидеров
 player = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} хексов)
 
 [commands.spectate]
-description = Перейти в режим наблюдателя или обратно в игру.
-params = []
+#description = Перейти в режим наблюдателя или обратно в игру.
+#params = []
 game = Возвращение в игру.
 spectator = Переключение в режим наблюдателя.
 
 [commands.join]
 description = Отправить запрос на вступление в команду.
-params = []
+params =
 title = Список команд
 player-not-found = [scarlet]Игрок не найден.
 sent = {player}[white] Хочет присоединиться в вашу команду.
@@ -62,7 +62,7 @@ invite-sent = [green]Приглашение отправлено.
 
 [commands.accept]
 description = Принять игрока в команду.
-params = []
+params =
 title = Список приглашений
 not-leader = [scarlet]Доступно только лидеру команды.
 no-players = [scarlet]Нет доступных приглашений.

@@ -10,6 +10,7 @@ import hexed.managers.Game
 import mindurka.api.MapFlags
 import mindurka.api.MapHandle
 import mindurka.api.MapManager
+import mindurka.coreplugin.CorePlugin
 import mindurka.util.SafeFilename
 import mindurka.util.child
 import mindurka.util.map
@@ -62,32 +63,6 @@ open class HexMapManager : MapManager {
     }
 
     protected val saves = Seq<DefaultSaveHandle>()
-
-    protected fun reloadSaves() {
-        val dir = Vars.dataDirectory.child("saves")
-        if (!dir.exists()) return
-        saves.clear()
-        for (save in dir.list()) {
-            try {
-                val meta = SaveIO.getMeta(save)
-                val flags = Seq<MapFlags>()
-                for (obj in meta.map.rules().objectives) {
-                    if (obj is MapObjectives.FlagObjective) {
-                        if (obj.details == "no1va" || obj.flag == "no1va" || obj.text() == "no1va") {
-                            flags.addUnique(MapFlags.No1va)
-                            continue
-                        }
-                    }
-                }
-                saves.add(DefaultSaveHandle(save, meta, flags))
-            } catch (_: Exception) {
-            }
-        }
-    }
-
-    init {
-        reloadSaves()
-    }
 
     override fun current(): MapHandle = mapHandleFor(Game.generator)
     override fun maps(): Iterator<MapHandle> =

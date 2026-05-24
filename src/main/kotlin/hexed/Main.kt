@@ -1,34 +1,40 @@
 package hexed
 
+import arc.struct.Seq
 import arc.util.CommandHandler
 import arc.util.Log
+import arc.util.io.Streams
 import hexed.coreplugin.HexMapManager
+import hexed.coreplugin.HexSpectateManager
 import hexed.generation.Generators
 import hexed.managers.Game
 import mindurka.api.Consts
 import mindurka.api.Gamemode
+import mindurka.api.Priority
+import mindurka.api.on
 import mindurka.coreplugin.CorePlugin
 import mindurka.util.prefixed
 import mindustry.Vars
 import mindustry.core.NetServer.TeamAssigner
+import mindustry.game.EventType
 import mindustry.game.Team
 import mindustry.mod.Plugin
 
 class Main : Plugin() {
+    private val patches = Seq<String>()
+
     override fun init() {
         CorePlugin.init(javaClass.classLoader.prefixed("hexed"))
-        Gamemode.maps = HexMapManager()
 
-        Gamemode.defaultPatch = { "name: hexed patch\n" +
-            "block.impact-reactor.liquidCapacity: 400f\n" +
-            "block.thorium-reactor.liquidCapacity: 400f\n" +
-            "block.hyper-processor.liquidCapacity: 400f\n" +
-            "\n" +
-            "block.ripple.ammoTypes.graphite.buildingDamageMultiplier: 0.2\n" +
-            "block.ripple.ammoTypes.pyratite.buildingDamageMultiplier: 0.2\n" +
-            "block.ripple.ammoTypes.blast-compound.buildingDamageMultiplier: 0.2\n" +
-            "block.ripple.ammoTypes.silicon.buildingDamageMultiplier: 0.2\n" +
-            "block.ripple.ammoTypes.plastanium.buildingDamageMultiplier: 0.2" }
+        patches.add(Streams.copyString(javaClass.classLoader.prefixed("hexed").getResourceAsStream("patches/kelpatch.hjson")))
+        patches.add(Streams.copyString(javaClass.classLoader.prefixed("hexed").getResourceAsStream("patches/meowpatch.hjson")))
+
+        Gamemode.randomizeTeams = false
+        Gamemode.restoreTeams = false
+        Gamemode.maps = HexMapManager()
+        Gamemode.spectate = HexSpectateManager()
+
+        Gamemode.defaultPatch = { patches.random() }
 
         // Assigned players to derelict team by default
         Vars.netServer.assigner = TeamAssigner { _, _ -> Team.derelict }
