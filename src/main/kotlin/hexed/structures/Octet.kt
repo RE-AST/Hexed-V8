@@ -2,36 +2,31 @@ package hexed.structures
 
 import arc.Core
 import arc.graphics.Color
-import arc.math.Mathf
-import arc.math.geom.Intersector
 import arc.math.geom.Position
-import arc.struct.IntSeq
 import arc.util.Log
 import hexed.Config
-import hexed.utils.HexUtils
+import hexed.Config.RADIUS
 import hexed.managers.Game
 import hexed.managers.Session
-
+import hexed.managers.Shapes
+import mindurka.util.debug
 import mindustry.Vars
 import mindustry.content.Fx
 import mindustry.game.Team
 import mindustry.gen.Call
+import mindustry.world.Block
 import mindustry.world.blocks.storage.CoreBlock
 import mindustry.world.blocks.storage.CoreBlock.CoreBuild
+import kotlin.math.abs
+import kotlin.math.max
 
-import hexed.Config.RADIUS
-import hexed.managers.Shapes
-import mindurka.util.debug
-import mindustry.entities.Damage
-import mindustry.world.Block
-import java.util.Arrays
-
-class Hex(override val x: Int, override val y: Int, override val id: Int) : Shape {
+class Octet(override val x: Int, override val y: Int, override val id: Int) : Shape {
     override val progress = IntArray(256)
     override var owner: Party? = null
 
     override val hasCore: Boolean
         get() = Vars.world.build(x, y) is CoreBuild
+
 
     override fun blockCreated(block: Block, team: Team) {
         if (team == Team.derelict) return
@@ -92,20 +87,18 @@ class Hex(override val x: Int, override val y: Int, override val id: Int) : Shap
         }
     }
 
-    // region progress
-
     override fun getProgress(team: Team) = progress[team.id]
 
-    // endregion
-    // region geometry
-
     override fun getX() = (x * Vars.tilesize).toFloat()
-
     override fun getY() = (y * Vars.tilesize).toFloat()
 
     override fun contains(position: Position) = contains(position.x, position.y)
-    override fun contains(x: Float, y: Float) =
-        Intersector.isInsideHexagon(getX(), getY(), (RADIUS * 2 * Vars.tilesize).toFloat(), x, y)
+    override fun contains(x: Float, y: Float): Boolean {
+        val r1 = (RADIUS * Vars.tilesize).toFloat()
+        val r2 = r1 * 1.4f
+        val x = abs(x - getX())
+        val y = abs(y - getY())
 
-    // endregion
+        return x + y < r2 && max(x, y) < r1
+    }
 }

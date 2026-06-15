@@ -10,6 +10,9 @@ import hexed.Config
 import hexed.Config.RADIUS
 import hexed.utils.HexUtils
 import hexed.generation.filters.WallOreFilter
+import hexed.managers.Hexes
+import hexed.managers.Shapes
+import hexed.managers.ShapesImpl
 import mindustry.Vars
 import mindustry.content.Blocks
 import mindustry.content.Planets
@@ -25,8 +28,10 @@ import mindustry.world.Tile
 import mindustry.world.Tiles
 import mindustry.world.blocks.ConstructBlock
 import mindustry.world.blocks.environment.OreBlock
+import mindustry.world.blocks.environment.Prop
 
 abstract class Generator(
+    val shapes: ShapesImpl,
     val name: String,
     val planet: Planet,
     val startBase: Schematic,
@@ -36,29 +41,20 @@ abstract class Generator(
 ) {
 
     fun generate(tiles: Tiles) {
+        Shapes = shapes
+        Shapes.reset() // For some reason it's not refreshing otherwise.
+        Shapes.play()
+
         // First, fill the entire map
         tiles.each { x, y -> tiles.set(x, y, Tile(x, y, filler, Blocks.air, filler.asFloor().wall)) }
 
         // Then carve out the hexes
-        HexUtils.getHexes { x, y ->
+        Shapes.getShapes { x, y ->
             // Remove the main hex area
-            HexUtils.iterateHex(x, y, RADIUS) { it?.remove() }
-
-            // Carve the hex edges
-            for (angle in 0 until 360 step 120) {
-                Tmp.v1.trnsExact(angle - 30f, 90f).add(x.toFloat(), y.toFloat())
-
-                if (!tiles.`in`(Tmp.v1.x.toInt(), Tmp.v1.y.toInt())) continue
-
-                Tmp.v1.trnsExact(angle - 30f, 46f).add(x.toFloat(), y.toFloat())
-
-                Bresenham2.line(x, y, Tmp.v1.x.toInt(), Tmp.v1.y.toInt()) { cx, cy ->
-                    Geometry.circle(cx, cy, tiles.width, tiles.height, 3) { c2x, c2y ->
-                        tiles.getc(c2x, c2y)?.remove()
-                    }
-                }
-            }
+            Shapes.iterateShape(x, y, RADIUS) { it?.remove() }
         }
+
+        Shapes.carvePaths(tiles)
 
         val input = GenerateInput()
 
@@ -77,7 +73,7 @@ abstract class Generator(
     fun generateCore() {
         val radius = if (this.planet == Planets.serpulo) 5 else 7 // nice
 
-        HexUtils.getHexes { x, y ->
+        Shapes.getShapes { x, y ->
             Vars.world.tile(x, y)?.getLinkedTilesAs(ConstructBlock.get(radius)) {
                 it?.remove()
                 it?.setFloor(Blocks.coreZone.asFloor())
@@ -117,7 +113,7 @@ abstract class Generator(
 
     fun postGenerate() {
         Vars.world.tiles.eachTile {
-            if (it.floor().isLiquid) it.remove()
+            if (it.floor().isLiquid && it.block() !is Prop) it.remove()
             if (it.block().itemDrop != null) it.clearOverlay()
         }
     }

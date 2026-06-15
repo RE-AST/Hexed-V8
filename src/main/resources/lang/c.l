@@ -1,9 +1,14 @@
 [generic.gameover]
-title = [white]ROUND OVER
-      =
-      = {winner} is [accent]victorious[] with [accent]{controlled} hexes[] captured
-      =
-      = [accent]Final scores:\n
+title.hex = [white]ROUND OVER
+          =
+          = {winner} is [accent]victorious[] with [accent]{controlled} hexes[] captured
+          =
+          = [accent]Final scores:\n
+title.octet = [white]ROUND OVER
+            =
+            = {winner} is [accent]victorious[] with [accent]{controlled} octets[] captured
+            =
+            = [accent]Final scores:\n
 
 [generic.rtv]
 title = [white]ROUND SKIPPED\n\n
@@ -11,13 +16,20 @@ title = [white]ROUND SKIPPED\n\n
 [game]
 no-available-hex = No available hex found to spawn.
                  = You will be [accent]spectating[] the game.
+no-available-octet = No available octet found to spawn.
+                   = You will be [accent]spectating[] the game.
+
 player-destroyed = {defender}[accent] has been eliminated!
 player-destroyed-by-player = {defender}[accent] has been eliminated by {attacker}[accent]!
 
-player-dominating = {player}[white] is dominating the game with [accent]{1}[] hexes captured!
+player-dominating.hex = {player}[white] is dominating the game with [accent]{1}[] hexes captured!
+player-dominating.octet = {player}[white] is dominating the game with [accent]{1}[] octets captured!
 
 hex-lost = [lightgray]Hex [accent]#{0}[] lost!
 hex-captured = [lightgray]Hex [accent]#{0}[] captured!
+
+octet-lost = [lightgray]Octet [accent]#{0}[] lost!
+octet-captured = [lightgray]Octet [accent]#{0}[] captured!
 
 [hex]
 none = [lightgray]Not in hex
@@ -28,6 +40,17 @@ captured = [lightgray]Hex [accent]#{n}
          = [accent][Captured]
 
 owner = [lightgray]Hex [accent]#{n}
+      = [accent][Captured by {player}[accent]]
+
+[octet]
+none = [lightgray]Not in octet
+progress = [lightgray]Octet [accent]#{n}
+         = [lightgray]Capture progress: [accent]{progress}%
+
+captured = [lightgray]Octet [accent]#{n}
+         = [accent][Captured]
+
+owner = [lightgray]Octet [accent]#{n}
       = [accent][Captured by {player}[accent]]
 
 [commands]
@@ -43,8 +66,8 @@ params =
 title = [accent]Leaderboard
       = {time} [white]remaining
       = {stats}
-
-player = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} hexes)
+player.hex = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} hexes)
+player.octet = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} octets)
 
 [commands.spectate]
 # description = Switch to spectator mode or return to the game.
@@ -58,7 +81,7 @@ params =
 title = Available players
 sent = {player}[white] wants to join your team.
      = Enter [accent]/accept
-invite-sent = [green]Invitation sent
+invite-sent = [green]Invitation sent.
 
 [commands.accept]
 description = Accept a player into the team.
@@ -68,4 +91,4 @@ not-leader = [scarlet]Only the team leader can do this.
 no-players = [scarlet]No available invites.
 derelict = [scarlet]Not available in spectator mode.
 success = {player}[white] has joined the team.
-invite-success = [green]Accepted invite
+invite-success = [green]Accepted invite.

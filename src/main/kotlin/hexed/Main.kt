@@ -8,6 +8,7 @@ import hexed.coreplugin.HexMapManager
 import hexed.coreplugin.HexSpectateManager
 import hexed.generation.Generators
 import hexed.managers.Game
+import hexed.managers.initShapes
 import mindurka.api.Consts
 import mindurka.api.Gamemode
 import mindurka.api.Priority
@@ -42,6 +43,8 @@ class Main : Plugin() {
         // Override coreplugin game over
         // Only for hexed
         Consts.serverControl.gameOverListener = {}
+
+        initShapes()
     }
 
     override fun registerServerCommands(handler: CommandHandler) {

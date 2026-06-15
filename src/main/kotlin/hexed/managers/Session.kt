@@ -6,6 +6,7 @@ import arc.graphics.Color
 import arc.math.Mathf
 import arc.struct.ObjectMap
 import arc.struct.Seq
+import arc.util.Log
 import arc.util.Time
 import arc.util.Timer
 import buj.tl.Tl.send
@@ -13,6 +14,7 @@ import hexed.Config
 import hexed.structures.Hex
 import hexed.structures.Member
 import hexed.structures.Party
+import hexed.structures.Shape
 import mindustry.Vars
 import mindustry.game.EventType
 import mindustry.game.EventType.PlayerConnectionConfirmed
@@ -81,7 +83,7 @@ object Session : Manager {
 
         party.team.cores().each(Cons {
             it.tile.removeNet()
-            Hexes.getHex(it)?.requestUpdate()
+            // Hexes.getHex(it)?.requestUpdate()
         })
 
         val data: TeamData = party.team.data()
@@ -147,7 +149,7 @@ object Session : Manager {
         val team = getSpawnTeam()
 
         if (hex == null || team == null) {
-            send(member.player).done("{game.no-available-hex}")
+            send(member.player).done("{game.no-available-${Shapes.tlKey}}")
             return
         }
 
@@ -170,7 +172,7 @@ object Session : Manager {
             }
         }
 
-        createParty(member, team)
+        hex.owner = createParty(member, team)
 
         // hex.update() // Update hex controller
 
@@ -196,8 +198,8 @@ object Session : Manager {
         }
     }
 
-    fun getSpawnHex(): Hex? =
-        Hexes.hexes.select { !it.hasCore }.random()
+    fun getSpawnHex(): Shape? =
+        Shapes.shapes.select { !it.hasCore }.random()
 
     // endregion
 }

@@ -15,15 +15,17 @@ import mindustry.world.Tile
 
 import hexed.Config.RADIUS
 import hexed.generation.filters.SolidNoiseFilter
+import hexed.managers.Shapes
+import hexed.managers.ShapesImpl
 import java.util.BitSet
 
 class MixtechGenerator : Generator {
-    constructor(name: String, filler: Block, vararg filters: GenerateFilter) : super(
-        name, Planets.sun, Config.mixtechBase, { rules -> Config.mixtechRules.get(rules) }, filler, *filters
+    constructor(shapes: ShapesImpl, name: String, filler: Block, vararg filters: GenerateFilter) : super(
+        shapes, name, Planets.sun, Config.mixtechBase, { rules -> Config.mixtechRules.get(rules) }, filler, *filters
     )
 
-    constructor(name: String, ruleSetter: Cons<Rules>, filler: Block, vararg filters: GenerateFilter) : super(
-        name, Planets.sun, Config.mixtechBase, { rules ->
+    constructor(shapes: ShapesImpl, name: String, ruleSetter: Cons<Rules>, filler: Block, vararg filters: GenerateFilter) : super(
+        shapes, name, Planets.sun, Config.mixtechBase, { rules ->
             ruleSetter.get(rules)
             Config.mixtechRules.get(rules)
         }, filler, *filters
@@ -84,10 +86,10 @@ class MixtechGenerator : Generator {
     }
 
     fun generateVents() {
-        HexUtils.getHexes { x, y ->
+        Shapes.getShapes { x, y ->
             val tiles = Seq<Tile>()
 
-            HexUtils.iterateHex(x, y, RADIUS - 4, { tile ->
+            Shapes.iterateShape(x, y, RADIUS - 4, { tile ->
                 Decorations.vents.containsKey(tile?.floor())
             }, tiles::add)
 

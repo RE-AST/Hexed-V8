@@ -1,22 +1,33 @@
 [generic.gameover]
-title = [white]РАУНД ЗАВЕРШЕН
-      =
-      = {winner} [accent]победил, имея [accent]{controlled} захваченных хексов []
-      =
-      = [accent]Итоговые результаты:\n
+title.hex = [white]РАУНД ЗАВЕРШЕН
+          =
+          = {winner} [accent]победил, имея [accent]{controlled} захваченных хексов[]
+          =
+          = [accent]Итоговые результаты:\n
+title.octet = [white]РАУНД ЗАВЕРШЕН
+            =
+            = {winner} [accent]победил, имея [accent]{controlled} захваченных октетов[]
+            =
+            = [accent]Итоговые результаты:\n
 
 [generic.rtv]
 title = [white]РАУНД ПРОПУЩЕН\n\n
 
 [game]
 no-available-hex = [lightgray]Нет доступных хексов для появления.
+no-available-octet = [lightgray]Нет доступных октетов для появления.
+
 player-destroyed = {defender}[accent] был уничтожен!
 player-destroyed-by-player = {defender}[accent] был уничтожен игроком {attacker}[accent]!
 
-player-dominating = {player}[white] Доминирует, захватив [accent]{1}[] хексов!
+player-dominating.hex = {player}[white] Доминирует, захватив [accent]{1}[] хексов!
+player-dominating.octet = {player}[white] Доминирует, захватив [accent]{1}[] октетов!
 
 hex-lost = [lightgray]Хекс [accent]#{0}[] потерян!
 hex-captured = [lightgray]Хекс [accent]#{0}[] захвачен!
+
+octet-lost = [lightgray]Октет [accent]#{0}[] потерян!
+octet-captured = [lightgray]Октет [accent]#{0}[] захвачен!
 
 [hex]
 none = [lightgray]Не в хексе
@@ -27,6 +38,17 @@ captured = [lightgray]Хекс [accent]#{n}
          = [accent][захвачен]
 
 owner = [lightgray]Хекс [accent]#{n}
+      = [accent][захвачен игроком: {player}[accent]]
+
+[octet]
+none = [lightgray]Не в октете
+progress = [lightgray]Октет [accent]#{n}
+         = [lightgray]Прогресс захвата: [accent]{progress}%
+
+captured = [lightgray]Октет [accent]#{n}
+         = [accent][захвачен]
+
+owner = [lightgray]Октет [accent]#{n}
       = [accent][захвачен игроком: {player}[accent]]
 
 [commands]
@@ -42,8 +64,8 @@ params =
 title = [accent]Таблица лидеров
       = {time} [white]осталось
       = {stats}
-
-player = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} хексов)
+player.hex = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} хексов)
+player.octet = \n[accent]{pos}. [white]{name}[lightgray] [white]({controlled} октетов)
 
 [commands.spectate]
 #description = Перейти в режим наблюдателя или обратно в игру.

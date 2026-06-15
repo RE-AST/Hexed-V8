@@ -10,6 +10,7 @@ import mindustry.Vars
 import mindustry.world.Tile
 import mindustry.world.blocks.environment.SteamVent
 import hexed.Config.SPACING
+import hexed.managers.Shapes
 
 object HexUtils {
     fun iterateHex(x: Int, y: Int, radius: Int, cons: Cons<Tile?>) {
@@ -42,16 +43,5 @@ object HexUtils {
         }
     }
 
-    fun getHexes(cons: Intc2) {
-        val height = Mathf.sqrt3 * SPACING / 4f
-
-        for (x in 0 until Config.WIDTH / SPACING - 2) {
-            for (y in 0 until  Mathf.ceil(Config.HEIGHT / height - 2)) {
-                val cx = (x * SPACING * 1.5f + (y % 2) * SPACING * 0.75f) + SPACING / 2
-                val cy = (y * height) + SPACING / 2
-
-                cons.get(cx.toInt(), cy.toInt())
-            }
-        }
-    }
+    fun getHexes(cons: Intc2) = Shapes.getShapes(cons)
 }

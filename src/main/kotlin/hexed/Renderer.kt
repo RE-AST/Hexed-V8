@@ -6,6 +6,7 @@ import buj.tl.Tl
 import hexed.managers.Game
 import hexed.managers.Hexes
 import hexed.managers.Session
+import hexed.managers.Shapes
 import hexed.structures.Member
 import hexed.structures.Party
 import mindustry.core.UI
@@ -62,25 +63,25 @@ object Renderer {
     // region get
 
     fun getHud(member: Member): String {
-        val hex = Hexes.getHex(member.player)
+        val shape = Shapes.getShape(member.player)
         val party = Session.getParty(member)
 
-        if (hex == null) return Tl.fmt(member.player).done("{hex.none}")
+        if (shape == null) return Tl.fmt(member.player).done("{${Shapes.tlKey}.none}")
 
-        return if (hex.owner == null) {
+        return if (shape.owner == null) {
             Tl.fmt(member.player)
-                .put("n", hex.id.toString())
-                .put("progress", hex.getProgressPercent(member.team).toString())
-                .done("{hex.progress}")
-        } else if (hex.owner == party) {
+                .put("n", shape.id.toString())
+                .put("progress", shape.getProgressPercent(member.team).toString())
+                .done("{${Shapes.tlKey}.progress}")
+        } else if (shape.owner == party) {
             Tl.fmt(member.player)
-                .put("n", hex.id.toString())
-                .done("{hex.captured}")
+                .put("n", shape.id.toString())
+                .done("{${Shapes.tlKey}.captured}")
         } else {
             Tl.fmt(member.player)
-                .put("n", hex.id.toString())
-                .put("player", hex.owner!!.name)
-                .done("{hex.owner}")
+                .put("n", shape.id.toString())
+                .put("player", shape.owner!!.name)
+                .done("{${Shapes.tlKey}.owner}")
         }
     }
 
@@ -112,7 +113,7 @@ object Renderer {
                     .put("pos", (i + 1).toString())
                     .put("name", team.name)
                     .put("controlled", team.controlled.toString())
-                    .done("{commands.lb.player}")
+                    .done("{commands.lb.player.${Shapes.tlKey}}")
             )
         }
 

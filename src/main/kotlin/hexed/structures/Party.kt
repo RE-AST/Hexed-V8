@@ -3,6 +3,7 @@ package hexed.structures
 import arc.struct.Seq
 import buj.tl.Tl
 import hexed.managers.Hexes
+import hexed.managers.Shapes
 import mindustry.game.Team
 
 // Doesn't exist for derelict Team
@@ -18,7 +19,7 @@ class Party(var leader: Member) {
 
     val isOne: Boolean get() = members.size == 1
 
-    val controlled: Int get() = Hexes.hexes.count { it?.owner == this  }
+    val controlled: Int get() = Shapes.shapes.count { it?.owner == this }
 
     init {
         members.add(leader)

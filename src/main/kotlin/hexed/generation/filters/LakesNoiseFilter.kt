@@ -3,6 +3,7 @@ package hexed.generation.filters
 import arc.math.Mathf
 import arc.struct.Seq
 import hexed.Config
+import hexed.managers.Shapes
 import hexed.utils.HexUtils
 import mindustry.content.Blocks
 import mindustry.maps.filters.NoiseFilter
@@ -19,7 +20,7 @@ class LakesNoiseFilter : NoiseFilter() {
             return
         }
 
-        HexUtils.getHexes { x, y ->
+        Shapes.getShapes { x, y ->
             val dst = Mathf.dst(x.toFloat(), y.toFloat(), input.x.toFloat(), input.y.toFloat())
             if (dst > minRadius && dst < maxRadius) {
                 val noise = noise(input.x.toFloat(), input.y + input.x * tilt, scl, 1f, octaves, falloff)
